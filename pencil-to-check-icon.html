@@ -1,0 +1,164 @@
+
+<style>
+
+  :host {
+    width:  24px;
+    height: 24px;
+  }
+
+  #icon {
+    width:          inherit;
+    height:         inherit;
+    pointer-events: none; /* dont allow the svg to become a click event target */
+    fill:           var(--spriteful-icon-color, currentcolor);
+  }
+
+  #arc {
+    stroke: var(--spriteful-icon-color, currentcolor);
+  }
+
+  #maskArc {
+    stroke: var(--spriteful-icon-background-color, var(--app-background-color));
+  }
+
+  .eraser {
+    transform-origin: 12px 12px;
+    transition:       transform 0.2s ease-out 0.1s;
+    transform:        rotate(45deg);
+  }
+
+  .pencil-tip {
+    transform-origin: 12px 12px;
+    transition:       transform 0.2s ease-out;
+  }
+
+  .pencil {
+    transition: transform 0.1s ease-in-out;
+  }
+
+  .pencil-body {
+    transform-origin: 12px 12px;
+    transform:        rotate(45deg);
+    transition:       transform 0.1s ease-in-out;
+  }
+
+  .mask-arc {
+    transform-origin: 8.95px 9.15px;
+  }
+
+  .check-flag {
+    transform-origin: 3.925px 1px;
+    transform:        rotate(45deg) translate(8.35px, 0px) scale(0.01, 1);
+    opacity:          0;
+  }
+
+  .shrink-eraser {
+    transition: transform 0.1s ease-in, opacity 0.05s linear 0.1s; 
+    transform:  rotate(45deg) scale(1, 0.5);
+    opacity:    0;
+  }
+
+  .hide-pencil-tip {  
+    transition: transform 0.075s ease-in 0.05s, opacity 0.05s linear 0.1s;
+    transform:  scale(0.75, 0.75);
+    opacity:    0;
+  }
+
+  .pencil-to-check {
+    transition: transform 0.1s ease-in-out 0.15s;
+    transform:  translate(-0.35px, 2.9px);
+  }
+
+  .pencil-body-to-right-check {
+    transition: transform 0.1s ease-in-out 0.15s;
+    transform:  rotate(45deg) scale(0.38, 0.5);
+  }
+
+  .pencil-body-to-arc {
+    transition: transform 0.07s ease-in, opacity 0.01s linear 0.06s;
+    transform:  rotate(45deg) translate(0px, -2.8px) scale(0.38, 0.01);
+    opacity:    0;
+  }
+
+  .rotate-mask-arc {
+    transition: transform 0.25s linear;
+    transform:  rotate(-360deg);
+  }
+
+  .arc-to-check-flag {
+    transition: transform 0.1s ease-out 0.175s, opacity 0.01s linear 0.175s;
+    transform:  rotate(45deg) translate(0px, 0px) scale(1, 1);
+    opacity:    1;
+  }
+
+  .pencil-body-reset-for-check {
+    transition: none;  
+    transform:  rotate(45deg) translate(0px, 4.7px) scale(0.38, 0.01);
+  }
+
+  .pencil-body-to-check {
+    transition: transform 0.1s ease-in-out;
+    transform:  rotate(45deg) translate(0px, -6.2px) scale(0.38, 1.09);
+    opacity:    1;
+  }
+
+  .check-flag-hide {
+    transition: transform 0.1s ease-in, opacity 0.01s linear 0.1s;
+    transform:  rotate(45deg) translate(16.15px, 0px) scale(0.01, 1);
+    opacity:    0;
+  }
+
+</style>
+
+
+<svg id="icon"
+     version="1.1" 
+     xmlns="http://www.w3.org/2000/svg" 
+     xmlns:xlink="http://www.w3.org/1999/xlink" 
+     x="0px" 
+     y="0px"
+     viewBox="0 0 24 24" 
+     enable-background="new 0 0 24 24" 
+     xml:space="preserve">
+  <g id="arc">
+     <path d="M4.35 13 A 6 6 0 1 1 13.55 13" 
+           fill="transparent" 
+           stroke-width="2"/>
+  </g>
+  <g id="maskArc" class="mask-arc">
+     <path d="M4.35 13 A 6 6 0 1 1 13.55 13" 
+           fill="transparent"
+           stroke-width="2.5"/>
+  </g>
+  <g id="eraser" class="eraser">
+    <rect x="9.33"
+          y="1.3"
+          rx="1"
+          width="5.35" 
+          height="3.6"/>
+    <rect x="9.33"
+          y="2.9"
+          width="5.35" 
+          height="2"/>
+  </g>
+  <g id="pencil" class="pencil">
+    <rect id="pencilBody"
+          class="pencil-body"
+          x="9.35" 
+          y="6.45"
+          width="5.3" 
+          height="15.6"/>
+    <rect id="pencilTip" 
+          class="pencil-tip"
+          x="3" 
+          y="17.25"
+          width="3.75" 
+          height="3.75"/>
+  </g>
+  <g id="checkFlag" class="check-flag">
+    <rect x="12.35" 
+          y="8.15"
+          width="7.85" 
+          height="2"/>
+  </g>
+</svg>
