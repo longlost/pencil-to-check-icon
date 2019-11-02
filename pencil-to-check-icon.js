@@ -7,11 +7,11 @@
  * @demo demo/index.html
  */
 import {PolymerElement, html} from '@polymer/polymer/polymer-element.js';
-import {wait}                 from '@spriteful/utils/utils.js';
+import {wait}                 from '@longlost/utils/utils.js';
 import htmlString             from './pencil-to-check-icon.html';
 
 
-class SpritefulPencilToCheckIcon extends PolymerElement {
+class PencilToCheckIcon extends PolymerElement {
   static get is() { return 'pencil-to-check-icon'; }
 
   static get template() {
@@ -53,4 +53,4 @@ class SpritefulPencilToCheckIcon extends PolymerElement {
 
 }
 
-window.customElements.define(SpritefulPencilToCheckIcon.is, SpritefulPencilToCheckIcon);
+window.customElements.define(PencilToCheckIcon.is, PencilToCheckIcon);

@@ -1,5 +1,5 @@
 {
-  "name": "@spriteful/pencil-to-check-icon",
+  "name": "@longlost/pencil-to-check-icon",
   "version": "1.0.1",
   "description": "icon element that animates between pencil and check states",
   "main": "pencil-to-check-icon.js",
@@ -8,24 +8,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/spriteful/pencil-to-check-icon.git"
+    "url": "git+https://github.com/longlost/pencil-to-check-icon.git"
   },
-  "author": "Spriteful spritefuldev@gmail.com",
+  "author": "Longlost Dev longlostdev@gmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/spriteful/pencil-to-check-icon/issues"
+    "url": "https://github.com/longlost/pencil-to-check-icon/issues"
   },
-  "homepage": "https://github.com/spriteful/pencil-to-check-icon#readme",
+  "homepage": "https://github.com/longlost/pencil-to-check-icon#readme",
   "dependencies": {
-    "@polymer/polymer": "^3.1.0",
-    "@spriteful/utils": "^1.1.6"
+    "@longlost/utils": "^1.1.6",
+    "@polymer/polymer": "^3.3.0"
   },
   "devDependencies": {
-    "@polymer/iron-demo-helpers": "^3.0.2",
+    "@polymer/iron-demo-helpers": "^3.1.0",
     "@polymer/test-fixture": "^4.0.2",
-    "@webcomponents/webcomponentsjs": "^2.2.7",
+    "@webcomponents/webcomponentsjs": "^2.3.0",
     "chai": "^4.2.0",
-    "mocha": "^5.2.0",
-    "wct-mocha": "^1.0.0"
+    "mocha": "^6.2.2",
+    "wct-mocha": "^1.0.1"
   }
 }
