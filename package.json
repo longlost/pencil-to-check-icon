@@ -1,6 +1,6 @@
 {
   "name": "@longlost/pencil-to-check-icon",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "icon element that animates between pencil and check states",
   "main": "pencil-to-check-icon.js",
   "scripts": {
