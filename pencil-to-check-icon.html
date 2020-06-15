@@ -4,21 +4,23 @@
   :host {
     width:  24px;
     height: 24px;
+    --icon-background-color: var(--app-background-color);
+    --icon-color:            currentcolor;
   }
 
   #icon {
     width:          inherit;
     height:         inherit;
     pointer-events: none; /* dont allow the svg to become a click event target */
-    fill:           var(--icon-color, currentcolor);
+    fill:           var(--icon-color);
   }
 
   #arc {
-    stroke: var(--icon-color, currentcolor);
+    stroke: var(--icon-color);
   }
 
   #maskArc {
-    stroke: var(--icon-background-color, var(--app-background-color));
+    stroke: var(--icon-background-color);
   }
 
   .eraser {
