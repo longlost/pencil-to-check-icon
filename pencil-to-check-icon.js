@@ -7,7 +7,7 @@
  * @demo demo/index.html
  */
 import {PolymerElement, html} from '@polymer/polymer/polymer-element.js';
-import {wait}                 from '@longlost/utils/utils.js';
+import {wait}                 from '@longlost/app-core/utils.js';
 import htmlString             from './pencil-to-check-icon.html';
 
 
