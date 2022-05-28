@@ -1,3 +1,4 @@
+
 /**
  * `pencil-to-check-icon`
  * 
@@ -6,20 +7,23 @@
  * @polymer
  * @demo demo/index.html
  */
-import {PolymerElement, html} from '@polymer/polymer/polymer-element.js';
-import {wait}                 from '@longlost/app-core/utils.js';
-import htmlString             from './pencil-to-check-icon.html';
+
+import {PolymerElement} from '@polymer/polymer/polymer-element.js';
+import {wait}           from '@longlost/app-core/utils.js';
+import template         from './pencil-to-check-icon.html';
 
 
 class PencilToCheckIcon extends PolymerElement {
+
   static get is() { return 'pencil-to-check-icon'; }
 
   static get template() {
-    return html([htmlString]);
+    return template;
   }
 
 
   async toCheck() {
+
     this.$.eraser.classList.add('shrink-eraser');
     this.$.pencilTip.classList.add('hide-pencil-tip');
     this.$.pencil.classList.add('pencil-to-check');
@@ -36,6 +40,7 @@ class PencilToCheckIcon extends PolymerElement {
 
 
   async toPencil() {
+    
     this.$.maskArc.classList.remove('rotate-mask-arc');
     this.$.checkFlag.classList.add('check-flag-hide');
     await wait(50);
